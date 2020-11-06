@@ -1,0 +1,1073 @@
+<!doctype html >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      class="">
+<head>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    window._currentDevice = 'desktop';
+    window.Parameters = window.Parameters || {
+        AjaxContainer: 'div.dmBody',
+        WrappingContainer: 'div.dmOuter',
+        HomeUrl: 'https://www.jordaanfamilieboerdery.co.za/',
+        AccountUUID: '6850ac2082cd460ea9f85369fb846cf9',
+        SystemID: 'US_DIRECT_PRODUCTION',
+        SiteAlias: '76d80873',
+        SiteId: '1912992',
+        SiteType: atob('RFVEQU9ORQ=='),
+        ExternalUid: null,
+        IsSiteMultilingual: false,
+        InitialPostAlias: '',
+        InitialDynamicItem: '',
+        InitialPageAlias: 'home',
+        InitialEncodedPageAlias: 'aG9tZQ==',
+        CurrentPageUrl: '',
+        IsCurrentHomePage: true,
+        AllowAjax: true,
+        AfterAjaxCommand: null,
+        HomeLinkText: 'Back To Home',
+        UseGalleryModule: false,
+        CurrentThemeName: 'Layout Theme',
+        ThemeVersion: '1650',
+        DefaultPageAlias: '',
+        RemoveDID: true,
+        WidgetStyleID : null,
+        IsHeaderFixed: false,
+        IsHeaderSkinny: false,
+        IsBfs: true,
+        LayoutParams : {
+            _navigationAnimationStyle: 'slide',
+            _manifestId : 10003,
+            _device : 'desktop'
+        },
+        StorePageAlias: 'null',
+        StorePath: '',
+        StoreId: 'null',
+        StoreVersion: 0,
+        StoreBaseUrl: '',
+        StoreCleanUrl: true,
+        StoreDisableScrolling: true,
+        NotificationSubDomain: 'jordaanfamilieboerdery',
+        HasCustomDomain: true,
+        showCookieNotification: false,
+        cookiesNotificationMarkup: 'null',
+        translatedPageUrl: '',
+        isFastMigrationSite: false,
+        sidebarPosition: 'NA',
+        currentLanguage: 'en',
+        NavItems: 'W3sidGl0bGUiOiJDb21pbmcgU29vbiIsImFsaWFzIjoiaG9tZSIsInBhdGgiOiIvIiwiaW5OYXZpZ2F0aW9uIjp0cnVlLCJzdWJOYXYiOltdfV0=',
+        errors: {
+            general: 'There was an error connecting to the page.<br/> Make sure you are not offline.',
+            password: 'Incorrect name/password combination',
+            tryAgain: 'Try again'
+        },
+        NavigationAreaParams: {
+            ShowBackToHomeOnInnerPages: true,
+            NavbarSize: -1,
+            NavbarLiveHomePage: 'https://www.jordaanfamilieboerdery.co.za/',
+            BlockContainerSelector: '.dmBody',
+            NavbarSelector: '#dmNav:has(a)',
+            SubNavbarSelector: '#subnav_main'
+        },
+        hasCustomCode: false,
+        planID: 7,
+        disableTracking: false
+    };
+
+    window.Parameters.LayoutID = {};
+    window.Parameters.LayoutID[window._currentDevice] = 9;
+    window.Parameters.LayoutVariationID = {};
+    window.Parameters.LayoutVariationID[window._currentDevice] = 5;
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Injecting site-wide to the head -->
+
+
+
+<!-- End Injecting site-wide to the head -->
+
+<!-- ========= Meta Tags ========= -->
+<!-- PWA settings -->
+<script>
+    function toHash(str) {
+        var hash = 5381, i = str.length;
+        while (i) {
+            hash = hash * 33 ^ str.charCodeAt(--i)
+        }
+        return hash >>> 0
+    }
+</script>
+<script>
+    (function(global) {
+    //const cacheKey = global.cacheKey;
+    const isOffline = 'onLine' in navigator && navigator.onLine === false;
+    const hasServiceWorkerSupport = 'serviceWorker' in navigator;
+    if (isOffline) {
+        console.log('offline mode');
+    }
+    if (!hasServiceWorkerSupport) {
+        console.log('service worker is not supported');
+    }
+    if (hasServiceWorkerSupport && !isOffline) {
+        window.addEventListener('load', function() {
+            const serviceWorkerPath = '/runtime-service-worker.js?v=2';
+            navigator.serviceWorker
+                .register(serviceWorkerPath, { scope: './' })
+                .then(
+                    function(registration) {
+                        // Registration was successful
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    },
+                    function(err) {
+                        // registration failed :(
+                        console.log('ServiceWorker registration failed: ', err);
+                    }
+                )
+                .catch(function(err) {
+                    console.log(err);
+                });
+        });
+
+        // helper function to refresh the page
+        var refreshPage = (function() {
+            var refreshing;
+            return function() {
+                if (refreshing) return;
+                // prevent multiple refreshes
+                var refreshkey = 'refreshed' + location.href;
+                var prevRefresh = localStorage.getItem(refreshkey);
+                if (prevRefresh) {
+                    localStorage.removeItem(refreshkey);
+                    if (Date.now() - prevRefresh < 30000) {
+                        return; // dont go into a refresh loop
+                    }
+                }
+                refreshing = true;
+                localStorage.setItem(refreshkey, Date.now());
+                console.log('refereshing page');
+                window.location.reload();
+            };
+        })();
+
+        function messageServiceWorker(data) {
+            return new Promise(function(resolve, reject) {
+                if (navigator.serviceWorker.controller) {
+                    var worker = navigator.serviceWorker.controller;
+                    var messageChannel = new MessageChannel();
+                    messageChannel.port1.onmessage = replyHandler;
+                    worker.postMessage(data, [messageChannel.port2]);
+                    function replyHandler(event) {
+                        resolve(event.data);
+                    }
+                } else {
+                    resolve();
+                }
+            });
+        }
+    }
+})(window);
+</script>
+<!-- Add manifest -->
+<!-- End PWA settings -->
+
+
+<meta http-equiv="Content-type" content="text/html;charset=utf-8">
+<meta charset="utf-8">
+
+<link rel="canonical" href="index.html">
+
+<meta id="view" name="viewport"
+      content=", initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0, viewport-fit=cover"/>
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Coming Soon
+</title>
+
+<!--Add favorites icons-->
+
+<link rel="icon" type="image/x-icon" href="https://static-cdn.multiscreensite.com/runtime/favicon_d1_res.ico"/>
+
+<!-- End favorite icons -->
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://lirp-cdn.multiscreensite.com/" crossorigin />
+
+
+
+<!-- render the required CSS and JS in the head section -->
+<script>
+    window.SystemID = 'US_DIRECT_PRODUCTION';
+
+    if(!window.dmAPI) {
+        window.dmAPI = {
+            registerExternalRuntimeComponent: function() {
+            },
+            getCurrentDeviceType: function() {
+                return window._currentDevice;
+            }
+        };
+    }
+
+    if (!window.requestIdleCallback) {
+        window.requestIdleCallback = function (fn) {
+            setTimeout(fn, 0);
+        }
+    }
+
+    function loadCSS(link) {
+        try {
+            var urlParams = new URLSearchParams(window.location.search);
+            var noCSS = !!urlParams.get('nocss');
+            var cssTimeout = urlParams.get('cssTimeout') || 0;
+
+            if (noCSS) {
+                return;
+            }
+            requestIdleCallback(function () {
+                window.setTimeout(function () {
+                    link.onload = null;
+                    link.rel = 'stylesheet';
+                    link.type = 'text/css'
+                }, parseInt(cssTimeout, 10));
+            });
+        } catch (e) {/* Never fail - this is just a tool for measurements */}
+    }
+
+</script>
+<script>
+(function(n){"use strict";if(!n.l){n.l=function(){}}var o=loadCSS.t={};o.o=function(){var l;try{l=n.document.createElement("link").relList.supports("preload")}catch(e){l=false}return function(){return l}}();o.i=function(e){var l=e.media||"all";function enableStylesheet(){if(e.addEventListener){e.removeEventListener("load",enableStylesheet)}else if(e.attachEvent){e.detachEvent("onload",enableStylesheet)}e.setAttribute("onload",null);e.media=l}if(e.addEventListener){e.addEventListener("load",enableStylesheet)}else if(e.attachEvent){e.attachEvent("onload",enableStylesheet)}setTimeout(function(){e.rel="stylesheet";e.media="only x"});setTimeout(enableStylesheet,3e3)};o.s=function(){if(o.o()){return}var e=n.document.getElementsByTagName("link");for(var l=0;l<e.length;l++){var t=e[l];if(t.rel==="preload"&&t.getAttribute("as")==="style"&&!t.getAttribute("data-loadcss")){t.setAttribute("data-loadcss",true);o.i(t)}}};if(!o.o()){o.s();var e=n.setInterval(o.s,500);if(n.addEventListener){n.addEventListener("load",function(){o.s();n.clearInterval(e)})}else if(n.attachEvent){n.attachEvent("onload",function(){o.s();n.clearInterval(e)})}}if(typeof exports!=="undefined"){exports.l=loadCSS}else{n.l=loadCSS}})(typeof global!=="undefined"?global:this);
+</script>
+
+
+
+<style id="criticalCss">@charset "UTF-8";#dm div.dmContent h1,#dm div.dmContent h3,#dm div.dmFooter h2,#dm div.p_hfcontainer h2,.dmNewParagraph,.u_1931408407 ul.dmNavWrapper{direction:rtl}@font-face{font-family:'Alef Hebrew';font-display:swap;font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/ea/alefhebrew/v4/Alef-Regular.eot);src:url(https://fonts.gstatic.com/ea/alefhebrew/v4/Alef-Regular.eot?#iefix) format("embedded-opentype"),url(https://fonts.gstatic.com/ea/alefhebrew/v4/Alef-Regular.woff2) format("woff2"),url(https://fonts.gstatic.com/ea/alefhebrew/v4/Alef-Regular.woff) format("woff"),url(https://fonts.gstatic.com/ea/alefhebrew/v4/Alef-Regular.ttf) format("truetype");font-display:swap}@font-face{font-family:'Alef Hebrew';font-display:swap;font-style:normal;font-weight:700;src:url(https://fonts.gstatic.com/ea/alefhebrew/v4/Alef-Bold.eot);src:url(https://fonts.gstatic.com/ea/alefhebrew/v4/Alef-Bold.eot?#iefix) format("embedded-opentype"),url(https://fonts.gstatic.com/ea/alefhebrew/v4/Alef-Bold.woff2) format("woff2"),url(https://fonts.gstatic.com/ea/alefhebrew/v4/Alef-Bold.woff) format("woff"),url(https://fonts.gstatic.com/ea/alefhebrew/v4/Alef-Bold.ttf) format("truetype");font-display:swap}[class*=' dm-common-icons-']{speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:dm-common-icons!important}.dm-common-icons-close:before{content:'\e901'}.dmInner{min-height:100vh!important;position:relative}.dmPopup,.dmPopupMask{position:fixed;left:0}.display_None{display:none}.dmDisplay_None{display:none!important}.clearfix:after{clear:both;visibility:hidden;line-height:0;height:0}.clearfix:after,.clearfix:before{content:' ';display:table}.clearfix{display:inline-block}.supportsFontIcons .hasFontIcon{background-image:none!important}#dm .dmNav.dmNavCustom .dmHideFromNav,#dm .dmn .dmHideFromNav{display:none!important}.dmPopupMask{margin:0;display:none;width:10px;z-index:1000000999;top:0}#dmRoot .dmPopup{display:block}.dmPopup{padding:10px;text-align:left;margin:0 10px;top:10px;width:93%;z-index:1000009999!important;box-sizing:border-box;background:#f5f5f5;overflow-y:auto;height:100%;display:block}.dmDesktopBody #dm .dmInner .dmRespRow.desktop-no-padding,.dmRespRow.fullBleedMode{padding-left:0!important;padding-right:0!important}.dmPopup .dmPopupTitle{text-align:left;font:700 19px Helvetica,Arial;margin:20px 20px 35px;color:#999}#dmPopup{opacity:0}.dmPopupClose,.dmPopupClose:before{position:absolute;visibility:visible}.dmPopupClose{border-radius:25px;width:27px;height:27px;z-index:1;background-color:rgba(255,255,255,.4);top:12px;right:12px}.dmPopupClose:before{display:block;font-size:20px;color:#000;top:3px;right:3px}body.dmDesktopBody:not(.mac) .data::-webkit-scrollbar{width:5px;height:5px}body.dmDesktopBody:not(.mac) .data::-webkit-scrollbar-track{background:rgba(0,0,0,.1)}body.dmDesktopBody:not(.mac) .data::-webkit-scrollbar-thumb{background:#c8c8c8;box-shadow:inset 0 1px 2px #454545;border-radius:45px}.dmRespRow.fullBleedMode>.dmRespColsWrapper{width:100%!important;max-width:100%!important}#dm .dmRespRow .dmRespColsWrapper{display:-webkit-flex;display:flex}.pswp{display:none;z-index:9999999999!important}#dm .hasBackgroundOverlay:not(.dmPopupPage):not(.layout-drawer){position:relative!important}#dm .hasBackgroundOverlay:not(.hasExtraLayerOverlay):before{display:block!important;position:absolute!important;top:0!important;left:0!important;width:100%!important;height:100%!important;content:' '!important}.text-align-center{text-align:center}body.fix-mobile-scrolling{overflow:initial}p.rteBlock{margin:0}#dmRoot{text-decoration-skip-ink:none}.dmform-title{padding-right:15px;padding-left:15px}body{-webkit-overflow-scrolling:touch}section{display:block}html{font-family:Source Sans Pro;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}h1{margin:.67em 0}b{font-weight:700}hr{box-sizing:content-box;height:0}button,input{font-family:inherit;font-size:100%;margin:0;line-height:normal}button{text-transform:none}button,input[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}*,:after,:before{box-sizing:border-box}.dmRespRow.dmRespRowNoPadding{padding:0}.dmRespDesignRow,.dmRespRow{padding-top:15px;padding-bottom:15px}.dmRespDesignRow:after,.dmRespDesignRow:before,.dmRespRow:after,.dmRespRow:before{content:' ';display:table}.dmRespDesignRow:after,.dmRespRow:after{clear:both}.dmRespDesignRow,.dmRespRow,.dmRespRow .dmRespColsWrapper{max-width:960px;position:relative;margin:0 auto;width:100%}.dmRespDesignRow .dmRespDesignCol,.dmRespRow .dmRespCol{position:relative;width:100%;display:inline-block;vertical-align:top;float:left}.dmRespRow .dmRespCol>*{max-width:100%}.dmDesktopBody .dmRespRow .large-4{position:relative;width:33.33333%}.dmDesktopBody .dmRespRow .large-8{position:relative;width:66.66667%}.dmDesktopBody .dmRespDesignRow .large-12,.dmDesktopBody .dmRespRow .large-12{position:relative;width:100%}#dm .dmInner .dmWidget:not(.displayNone){display:inline-block}#dm .dmInner .dmWidget{text-decoration:none;margin:10px 0;clear:both;position:relative;text-align:center;line-height:22px;box-shadow:none;background-image:none;padding:0 0 0 40px;height:auto;border:0;white-space:nowrap}#dm .dmInner .dmWidget:after{content:'';display:inline-block;height:100%;vertical-align:middle;width:0;margin-right:-.25em}.dmWidget.R{float:right}#dm .dmInner .dmWidget input{width:98%;margin:auto;font-size:1.125em;padding:10px;background-color:transparent}#dm [data-buttonstyle^=FLAT] .dmWidget:not([data-buttonstyle]){background-clip:border-box}#dm [data-buttonstyle^=FLAT]:not([data-buttonstyle*=_ICON]) .dmWidget:not([data-buttonstyle]):not([data-buttonstyle*=_ICON]){padding:0}.dmNewParagraph[data-version]{line-height:initial}.dmNewParagraph[data-version] .text-align-center{text-align:center!important}.dmNewParagraph[data-version] .ql-indent-1{padding:0 1em;-webkit-padding-end:0;padding-inline-end:0;-webkit-padding-start:3em;padding-inline-start:3em}.dmNewParagraph[data-version] h1,.dmNewParagraph[data-version] h3,.dmNewParagraph[data-version] p{margin-top:0;margin-bottom:0}#dm .dmformsubmit input[type=submit]{text-align:inherit}#dm div.dmInner .dmform[data-layout=layout-3] .dmforminput{margin-top:20px}#dm div.dmInner .dmform[data-layout=layout-3] .dmforminput>:not(label):not(div):not(small){background:0;border:0;border-radius:0;-webkit-appearance:none;border-bottom:1px solid;height:30px}.dmHeader,.dmInner{background:#fff;color:#b8b8b8}#dm div.dmInner .dmform .dmforminput label[hide=true]{display:none}.dmform .dmforminput label{display:block;overflow:hidden;text-overflow:ellipsis}.dmform .dmWidgetClear{clear:both;display:block}#dmRoot.dmLargeBody #dm .dmWidget.dmformsubmit{max-width:100%;padding:0}.dmLargeBody #dm .large-12 .dmformsubmit.dmformsubmit{width:280px}*{border:0 solid #c32b2b;scrollbar-arrow-color:#fff;scrollbar-track-color:#F2F2F2;scrollbar-face-color:silver;scrollbar-highlight-color:silver;scrollbar-3dlight-color:silver;scrollbar-shadow-color:silver;scrollbar-darkshadow-color:silver;scrollbar-width:12px}body{width:100%;overflow:hidden;-webkit-text-size-adjust:100%!important;-ms-text-size-adjust:100%!important}h1,h2,h3,ul{margin-left:0;margin-right:0}.dmInner *{-webkit-font-smoothing:antialiased}.clearfix,a,li,ul{vertical-align:top}#iscrollBody,#site_content{position:relative}.dmOuter{word-wrap:break-word}.dmInner{min-width:768px!important;font-size:16px}.dmDesktopBody .dmInner{min-width:960px}.dmInner a{color:#b8b8b8}.dmInner ul:not(.defaultList){padding:0}.dmHeader{text-align:center;position:relative;width:100%;max-width:100%}.dm-title{text-align:center;font-size:21px;clear:both;padding:3px 3px 6px;max-height:150px;line-height:1.2;max-width:100%}.standard-var5 .dm-title{text-shadow:none;line-height:normal;background:0 0;margin:0;text-align:left}DIV.dmBody{padding:0;clear:both}.dmContent{margin:0;padding:0}#innerBar{position:relative;height:36px;width:100%;font-size:20px;margin:0;z-index:80}#dm .dmRespRow.dmRespRowNoPadding{padding:0}.dmLargeBody .dmBody .dmRespRowsWrapper,.dmRespRow.dmInnerBarRow{background-color:#fff}.dmRespRowsWrapper{max-width:960px;margin:0 auto}.dmNav{margin-top:20px}.dmNav li{position:relative}.dmNav li a{height:100%;display:block;padding:17px 10px;text-decoration:none}.dmDivider.defaultDivider{min-height:1px;background-color:rgba(184,184,184,.2);margin:0}#dm .dmRespColsWrapper{display:block}.dmNewParagraph{text-align:left;margin:8px 0;padding:2px 0}.dmLargeBody .dmRespRowsWrapper>.dmRespRow .dmRespCol,.dmLargeBody .fHeader .dmRespRow .dmRespCol{padding-left:.75%;padding-right:.75%}.dmLargeBody .dmRespRowsWrapper>.dmRespRow .dmRespCol:first-child,.dmLargeBody .fHeader .dmRespRow .dmRespCol:first-child{padding-left:0;padding-right:1.5%}.dmFooter,.standard-var5 .dm-title{padding:0}.dmLargeBody .dmRespRowsWrapper>.dmRespRow .dmRespCol:last-child,.dmLargeBody .fHeader .dmRespRow .dmRespCol:last-child{padding-right:0}.dmLargeBody .dmRespRowsWrapper>.dmRespRow .dmRespCol:only-child{padding-left:0;padding-right:0}#innerBar.lineInnerBar{display:table;width:100%;box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;font-size:20px;margin-top:30px;margin-bottom:30px;background-color:transparent;color:#b8b8b8}#innerBar .titleLine{display:table-cell;vertical-align:middle;width:50%}.dmPageTitleRow:not(#innerBar){display:none}.dmLinksMenu,.dmStandardDesktop{display:block}.titleLine hr{min-height:1px;background-color:rgba(184,184,184,.2)}.dmFooterContainer{position:relative}.dmFooter{font-size:1em;font-weight:400;text-align:left;background:#f0f0f0}.dmLargeBody .dmFooterResp>.dmRespRow .dmRespCol{padding-left:.75%;padding-right:.75%}.dmLargeBody .dmFooterResp>.dmRespRow .dmRespCol:first-child{padding-left:0;padding-right:1.5%}.dmLargeBody .dmFooterResp>.dmRespRow .dmRespCol:last-child{padding-right:0;padding-left:1.5%}.dmLargeBody .dmFooterResp>.dmRespRow .dmRespCol:only-child{padding-left:0;padding-right:0}.freeHeaderRowSide .dmLinksMenuHeader.desktopNavWrapper{text-align:right}.dmLinksMenu.desktopNavWrapper,.dmLinksMenuHeader.desktopNavWrapper,.skinnyHeaderLayout .dmLinksMenu.desktopNavWrapper{text-align:center}.dmLinksMenu{float:none!important}.dmHeaderDefaultH1{text-align:left;margin:0}.desktopTopNav{display:inline-block;margin-left:20px;margin-right:20px;vertical-align:top}.navItemSelectedServer>a{color:#1a1a1a}.desktopTopNav>a{text-decoration:none;color:#b8b8b8;display:inline-block;text-align:left}.navItemSelectedServer.navButtonLi>a{color:#b8b8b8;border-bottom:#b8b8b8 3px solid}.desktopNavWrapper ul li{position:relative;list-style:none;vertical-align:middle}.skinnyHeaderLayout .dmHeader .dmRespCol{display:table;float:none;height:50px}.skinnyHeaderLayout .desktopNavWrapper{display:table-cell;text-align:right}.dmInner a{outline:0;vertical-align:inherit}.skinnyHeaderLayout .fHeader .dmHeader .dmRespCol{float:left;display:block;height:auto}.desktopTopNav:first-child,.desktopTopNavBtnHidden+.desktopTopNav{margin-left:0}.dmStandardDesktop{margin:0 auto}#dm .dmInner .dmWidget{color:#1a1a1a;background-color:rgba(0,0,0,0)}#dm [data-buttonstyle=FLAT] .dmWidget:not([data-buttonstyle]){border-color:transparent}#dm .dmwidget-title{margin:10px 0;text-shadow:none;text-align:left;text-transform:capitalize;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;word-wrap:normal}.dmform{clear:both}div.dmInner input[type=email]{font-size:16px;width:100%;margin:3px 0;height:40px;padding:0 10px}div.dmInner input[type=submit]{margin:5px auto;width:100%;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;height:30px!important;color:#1a1a1a;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;font-size:16px;border:none;outline:0}.dmFooter,.dmInner .dmHomeSection3{color:#fff;background-color:#1a1a1a}.dmforminput{margin-top:10px;text-align:left;padding-left:.9375em;padding-right:.9375em}#dm .dmform .dmformsubmit{margin:20px 15px}div.dmInner .dmformsubmit input[type=submit]{height:auto!important}#dm .dmDivider{display:block;margin:10px 0}body{background-color:#eee}#dm .dmDividerWrapper{display:block}.dmFooterContainer .dmRespRow.dmDividerRow,.dmLargeBody #innerBar.lineInnerBar{display:none}#dm .dmBody .dmRespRowsWrapper{max-width:none;background-color:transparent}div.dmInner{font-weight:300;font-family:Roboto}#dm .dmwidget-title,.desktopTopNav>a,.dm-title,h1,h3{font-family:Oswald;font-weight:400}.dmLargeBody .dmRespRow{width:100%;max-width:none;margin-left:0;margin-right:0;padding-left:40px;padding-right:40px}.dmRespRow:not(.desktopHeaderBox) .dmRespColsWrapper{max-width:960px}.dmInner .dmHomeSection3{margin-top:0}section.dmRespRow{padding-top:0;padding-bottom:0}h1{font-size:56px}#dm .dmwidget-title,h3{font-size:30px}.skinnyHeaderLayout .desktopNavWrapper{vertical-align:top}.dmDesktopBody .dm-title{font-size:50px}.dmDesktopBody .fHeader .dm-title{font-size:40px}.desktopTopNav{margin:0}.desktopNavWrapper>ul>li{border-left:1px solid rgba(26,26,26,.15)}.desktopTopNav:last-child{margin-right:0}.desktopTopNav>a{font-size:12px;padding:30px 35px}#dm div.dmInner,#dm div.dmInner h1,#dm div.dmInner h2,#dm div.dmInner h3{font-family:'Alef Hebrew'}.dmLargeBody .navItemSelectedServer.navButtonLi>a{border:0;background-color:#1a1a1a}.dmLargeBody .dmInner .dmHomeSection3{padding:80px 40px}div.dmInner input[type=email]{border:0}.dmform .dmforminput label{font-weight:400;font-size:16px}.dmLinksMenu>ul{display:block;margin:0;font-size:0}.dmDivider{color:grey;border-color:currentColor;background:0 0}#dm [data-buttonstyle] div.dmInner .dmWidget{border-width:1px;border-style:solid;border-color:#b8b8b8}#dm div.dmInner{font-size:14px}#dm div.dmContent h1,#dm div.dmContent h3{color:#9b9b9b}#dm div.dmRespCol>*{line-height:normal}.dmform .dmforminput label{font-family:roboto}div.dmInner input[type=email]{background-color:#eee}#dm [data-buttonstyle] .dmWidget input{color:#9D9D9D}#dm div.dmContent h3{font-size:38px}#dm div.dmContent h1{font-size:65px}#dm .dmInner div#hcontainer.u_hcontainer{box-shadow:0 2px 3px -2px gray}.dmRespDesignRow .dmRespDesignCol.dmforminput{float:right}#dm .dmInner div.u_hcontainer,#dm .p_hfcontainer section.u_1458368417{float:none!important;top:auto!important;left:0!important;width:100%!important;position:relative!important;height:auto!important;min-width:0!important}.u_1931408407 ul.dmNavWrapper li{direction:ltr}#dm .p_hfcontainer div.u_1931408407 ul.dmNavWrapper>li>a{border-color:grey!important}.skinnyHeaderLayout .freeHeaderRowSide .dmLinksMenu.desktopNavWrapper{text-align:left!important}.dmLargeBody .dmRespRowsWrapper>.dmRespRow .dmRespCol:last-child,.dmLargeBody .fHeader .dmRespRow .dmRespCol:last-child{padding-left:0!important}#dm .p_hfcontainer div.u_1931408407 ul.dmNavWrapper>li>a .navItemText{font-family:'Alef Hebrew'!important;color:grey!important;font-size:12px!important}.standard-var5 .dm-title{color:#000!important}#dm .dmInner div.u_hcontainer{max-width:100%!important;text-align:center!important;padding:0!important;margin:0 auto!important}#dm .p_hfcontainer section.u_1458368417{background-color:rgba(255,255,255,1)!important;max-width:none!important;text-align:start!important;padding:10px 40px!important}#dm .p_hfcontainer h2.u_1087818251,h2.u_1067927003{width:calc(100% - 0px)!important;min-width:25px!important;text-align:right!important;padding:0 20px 0 0!important;float:none!important;left:0!important;position:relative!important;height:auto!important;max-width:100%!important;display:block!important}h2.u_1067927003{top:0!important}#dm .p_hfcontainer h2.u_1087818251{top:0!important;margin:7px 0 0!important}#dm .p_hfcontainer div.u_1464410382{float:none!important;top:0!important;max-width:100%!important;left:0!important;width:auto!important;position:relative!important;min-width:0!important;text-align:center!important;height:auto!important;padding:0!important;margin:0!important}#dm .dmBody div.u_1655009183:before{background-color:rgba(0,0,0,1)!important;opacity:.35!important}#dm .dmBody div.u_1763374893 input:not([type=submit]){border-bottom-color:rgba(255,255,255,1)!important}#dm .dmBody div.u_1763374893 .dmforminput label:not(.for-checkable):not(.custom-contact-checkable){color:rgba(255,255,255,1)!important;font-size:16px!important}#dm .dmBody .u_1763374893 .dmformsubmit{float:none!important;display:block!important;margin-left:auto!important;margin-right:auto!important}#dm .dmBody div.u_1763374893 .dmform-success,#dm .dmBody div.u_1763374893 .dmform-success .rteBlock,#dm .dmBody div.u_1763374893 .dmforminput input{color:rgba(255,255,255,1)!important}#dm .dmBody .u_1655009183:before{opacity:.5!important;background-color:#000!important}#dm .dmBody div.u_1763374893 input[type=submit]{color:rgba(0,0,0,1)!important}#dm .dmBody div.u_1655009183{background-repeat:no-repeat!important;background-image:url(https://lirp-cdn.multiscreensite.com/76d80873/dms3rep/multi/opt/September+2020-5560-1920w.JPG)!important}@media all and (min-width:1920px),all and (-webkit-min-device-pixel-ratio:1.5),all and (min--moz-device-pixel-ratio:1.5),all and (min-device-pixel-ratio:1.5){#dm .dmBody div.u_1655009183{background-repeat:no-repeat!important;background-image:url(https://lirp-cdn.multiscreensite.com/76d80873/dms3rep/multi/opt/September+2020-5560-2880w.JPG)!important}}#dm .dmBody div.u_1359776046{padding-top:0!important}#dm .dmBody div.u_1763374893 .dmformsubmit{background-color:rgba(184,184,184,1)!important;width:228px!important;height:55px!important}#dm .dmBody div.u_1655009183{float:none!important;top:0!important;left:0!important;width:auto!important;position:relative!important;height:auto!important;max-width:100%!important;min-width:0!important;text-align:center!important;background-attachment:initial!important;background-size:cover!important;background-position:50% 0!important;padding:105.5px 40px 35.5px!important;margin:0!important}#dm .dmBody div.u_1763374893,#dm .dmBody div.u_1865530672,#dm .dmBody div.u_1935722857,#dm .dmBody div.u_1948871958{float:none!important;top:0!important;left:0!important;position:relative!important;height:auto!important;min-width:25px!important}#dm .dmBody div.u_1948871958{width:calc(100% - 0px)!important;max-width:100%!important;padding:2px 0 0!important;margin:8px 0 0!important}#dm .dmBody div.u_1935722857{line-height:initial!important;display:block!important;width:calc(100% - 430px)!important;max-width:543px!important;padding:0 0 2px!important;margin:19px 348.5px 8px 430px!important}#dm .dmBody div.u_1763374893{width:calc(100% - 456px)!important;max-width:494px!important;text-align:center!important;padding:0!important;margin:-8px 385.5px 0 456px!important}#dm .dmBody div.u_1865530672{width:calc(100% - 189px)!important;max-width:1030px!important;display:block!important;padding:2px 0!important;margin:15px 0 8px 189px!important}.font-size-35,.size-35{font-size:35px!important}.font-size-60,.size-60{font-size:60px!important}.font-size-20,.size-20{font-size:20px!important}:root{--button-color:#F66035;--button-hover-color:#F86F4C;--text-on-light:#F66035;--text-on-dark:#F66035;--text-on-button:#FFF;--header-color:#313131;--header-border-color:#222222;--header-text-color:#ffffff}#imageZone{position:absolute;margin:auto}.coloumns{border-radius:3px;background-color:#f9980d;height:18px;width:6px;-webkit-animation-name:loader;-webkit-animation-duration:1s;-webkit-animation-iteration-count:infinite;-webkit-animation-direction:linear;-moz-animation-name:loader;-moz-animation-duration:1s;-moz-animation-iteration-count:infinite;-moz-animation-direction:linear;opacity:.25;-webkit-transform:scale(.7);-webkit-transform-origin:50% 180%;-moz-transform:scale(.7);-moz-transform-origin:50% 180%;position:absolute}#coloumn1{-webkit-transform:rotate(0);-webkit-animation-delay:-.914s;-moz-transform:rotate(0);-moz-animation-delay:-.914s}#coloumn2{-webkit-transform:rotate(30deg);-webkit-animation-delay:-.831s;-moz-transform:rotate(30deg);-moz-animation-delay:-.831s}#coloumn3{-webkit-transform:rotate(60deg);-webkit-animation-delay:-.747s;-moz-transform:rotate(60deg);-moz-animation-delay:-.747s}#coloumn4{-webkit-transform:rotate(90deg);-webkit-animation-delay:-.664s;-moz-transform:rotate(90deg);-moz-animation-delay:-.664s}#coloumn5{-webkit-transform:rotate(120deg);-webkit-animation-delay:-.581s;-moz-transform:rotate(120deg);-moz-animation-delay:-.581s}#coloumn6{-webkit-transform:rotate(150deg);-webkit-animation-delay:-.498s;-moz-transform:rotate(150deg);-moz-animation-delay:-.498s}#coloumn7{-webkit-transform:rotate(180deg);-webkit-animation-delay:-.415s;-moz-transform:rotate(180deg);-moz-animation-delay:-.415s}#coloumn8{-webkit-transform:rotate(210deg);-webkit-animation-delay:-.332s;-moz-transform:rotate(210deg);-moz-animation-delay:-.332s}#coloumn9{-webkit-transform:rotate(240deg);-webkit-animation-delay:-.249s;-moz-transform:rotate(240deg);-moz-animation-delay:-.249s}#coloumn10{-webkit-transform:rotate(270deg);-webkit-animation-delay:-.166s;-moz-transform:rotate(270deg);-moz-animation-delay:-.166s}#coloumn11{-webkit-transform:rotate(300deg);-webkit-animation-delay:-83ms;-moz-transform:rotate(300deg);-moz-animation-delay:-83ms}#coloumn12{-webkit-transform:rotate(330deg);-moz-transform:rotate(330deg)}@-webkit-keyframes loader{0%{opacity:1}100%{opacity:.25}}@-moz-keyframes loader{0%{opacity:1}100%{opacity:.25}}
+    .dmDesktopBody [data-anim-desktop]:not([data-anim-desktop='none']) {
+        visibility: hidden;
+    }
+
+    
+</style>
+
+
+
+
+<!-- End render the required css and JS in the head section -->
+
+
+
+
+
+
+
+
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+
+
+
+<!-- SYS- VVNfRElSRUNUX1BST0RVQ1RJT04= -->
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body id="dmRoot"  class="supportsFontIcons supportsFontIcons dmRoot dmDesktopBody fix-mobile-scrolling dmResellerSite dmLargeBody " style="padding:0;margin:0;"
+            >
+        <div id="disabledImageZone" style="display:none;z-index:-1">
+            <style type="text/css">#imageZone {
+                    position: absolute;
+                    margin: auto;
+                }
+
+                .coloumns {
+                    border-radius: 3px;
+                    background-color: rgb(249, 152, 13); /*border:1px solid #999;*/
+                    height: 18px;
+                    width: 6px;
+                    -webkit-animation-name: loader;
+                    -webkit-animation-duration: 1s;
+                    -webkit-animation-iteration-count: infinite;
+                    -webkit-animation-direction: linear;
+                    -moz-animation-name: loader;
+                    -moz-animation-duration: 1s;
+                    -moz-animation-iteration-count: infinite;
+                    -moz-animation-direction: linear;
+                    opacity: .25;
+                    -webkit-transform: scale(0.7);
+                    -webkit-transform-origin: 50% 180%;
+                    -moz-transform: scale(0.7);
+                    -moz-transform-origin: 50% 180%;
+                    position: absolute;
+                }
+
+                #coloumn1 {
+                    -webkit-transform: rotate(0deg);
+                    -webkit-animation-delay: -.914s;
+                    -moz-transform: rotate(0deg);
+                    -moz-animation-delay: -.914s;
+                }
+
+                #coloumn2 {
+                    -webkit-transform: rotate(30deg);
+                    -webkit-animation-delay: -.831s;
+                    -moz-transform: rotate(30deg);
+                    -moz-animation-delay: -.831s;
+                }
+
+                #coloumn3 {
+                    -webkit-transform: rotate(60deg);
+                    -webkit-animation-delay: -.747s;
+                    -moz-transform: rotate(60deg);
+                    -moz-animation-delay: -.747s;
+                }
+
+                #coloumn4 {
+                    -webkit-transform: rotate(90deg);
+                    -webkit-animation-delay: -.664s;
+                    -moz-transform: rotate(90deg);
+                    -moz-animation-delay: -.664s;
+                }
+
+                #coloumn5 {
+                    -webkit-transform: rotate(120deg);
+                    -webkit-animation-delay: -.581s;
+                    -moz-transform: rotate(120deg);
+                    -moz-animation-delay: -.581s;
+                }
+
+                #coloumn6 {
+                    -webkit-transform: rotate(150deg);
+                    -webkit-animation-delay: -.498s;
+                    -moz-transform: rotate(150deg);
+                    -moz-animation-delay: -.498s;
+                }
+
+                #coloumn7 {
+                    -webkit-transform: rotate(180deg);
+                    -webkit-animation-delay: -.415s;
+                    -moz-transform: rotate(180deg);
+                    -moz-animation-delay: -.415s;
+                }
+
+                #coloumn8 {
+                    -webkit-transform: rotate(210deg);
+                    -webkit-animation-delay: -.332s;
+                    -moz-transform: rotate(210deg);
+                    -moz-animation-delay: -.332s;
+                }
+
+                #coloumn9 {
+                    -webkit-transform: rotate(240deg);
+                    -webkit-animation-delay: -.249s;
+                    -moz-transform: rotate(240deg);
+                    -moz-animation-delay: -.249s;
+                }
+
+                #coloumn10 {
+                    -webkit-transform: rotate(270deg);
+                    -webkit-animation-delay: -.166s;
+                    -moz-transform: rotate(270deg);
+                    -moz-animation-delay: -.166s;
+                }
+
+                #coloumn11 {
+                    -webkit-transform: rotate(300deg);
+                    -webkit-animation-delay: -.083s;
+                    -moz-transform: rotate(300deg);
+                    -moz-animation-delay: -.083s;
+                }
+
+                #coloumn12 {
+                    -webkit-transform: rotate(330deg);
+                    -moz-transform: rotate(330deg);
+                }
+
+                @-webkit-keyframes loader {
+                    0% {
+                        opacity: 1;
+                    }
+                    100% {
+                        opacity: .25;
+                    }
+                }
+
+                @-moz-keyframes loader {
+                    0% {
+                        opacity: 1;
+                    }
+                    100% {
+                        opacity: .25;
+                    }
+                }
+            </style>
+            <div id='imageZone'>
+                <div id='coloumn1' class='coloumns'></div>
+                <div id='coloumn2' class='coloumns'></div>
+                <div id='coloumn3' class='coloumns'></div>
+                <div id='coloumn4' class='coloumns'></div>
+                <div id='coloumn5' class='coloumns'></div>
+                <div id='coloumn6' class='coloumns'></div>
+                <div id='coloumn7' class='coloumns'></div>
+                <div id='coloumn8' class='coloumns'></div>
+                <div id='coloumn9' class='coloumns'></div>
+                <div id='coloumn10' class='coloumns'></div>
+                <div id='coloumn11' class='coloumns'></div>
+                <div id='coloumn12' class='coloumns'></div>
+            </div>
+        </div>
+
+        <!-- ========= Site Content ========= -->
+        <div id="dm" class='dmwr'>
+            
+            <div class="dm_wrapper standard-var5 widgetStyle-3 standard">
+                 <div dmwrapped="true" id="1554514795" class="dm-home-page" themewaschanged="true"> <div dmtemplateid="skinnyHeaderLayout" class="skinnyHeaderLayout dm-bfs dm-layout-home dm-single-page-nav  dmPageBody d-page-1734971351 dmFreeHeader" id="dm-outer-wrapper" data-page-class="1734971351" data-buttonstyle="FLAT" data-background-size="cover" data-background-attachment="fixed" data-background-repeat="no-repeat" data-background-position="50% 0%" data-background-image="url(https://dd-cdn.multiscreensite.com/themes/sky-patrol/sky-patrol-hp-main-img.jpg)" data-background-hide-inner="true" data-background-fullbleed="false" data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex" data-background-parallax-speed="0.2"> <div id="dmStyle_outerContainer" class="dmOuter"> <div id="dmStyle_innerContainer" class="dmInner"> <div class="dmLayoutWrapper standard-var dmStandardDesktop"> <ul class="dmn dmLayoutNav hiddenNavPlaceHolder navPlaceHolder dmDisplay_None"></ul> 
+ <div class="dmHeaderContainer fHeader d-header-wrapper"> <div id="hcontainer" class="u_hcontainer dmHeader p_hfcontainer" freeheader="true"> <div dm:templateorder="76" class="dmHeaderResp noSwitch" id="1261229135"> <div class="u_1464410382 dmRespRow dmHeaderContent freeHeaderRowSide fullBleedChanged fullBleedMode desktop-no-padding" id="1464410382"> <div class="dmRespColsWrapper clearfix" id="1098123824"> <div class="u_1233033753 dmRespCol small-12 large-8 medium-8" id="1233033753"> <div class="u_1931408407 dmLinksMenuHeader dmLinksMenu desktopNavWrapper" id="1931408407" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-dmtmpl="true" wr="false" icon="true" surround="false" adwords="" data-from-nav="true" data-sub-nav="true" data-nav-structure="HORIZONTAL" data-show-vertical-sub-items="HOVER" data-items="5" data-links-level="0" is-build-your-own="false"> <ul class="dmNavWrapper dmn menuContainer "> <li class=" desktopTopNav navListLi navButtonLi    navItemSelectedServer "> <a href="index.html" class="dmUDNavigationItem_00 " target="" data-target-page-alias=""> <span class="navItemText ">Coming Soon</span> 
+</a> 
+</li> 
+</ul> 
+</div> 
+</div> 
+ <div class="u_1564515911 dmRespCol small-12 dmHeaderCol1 titleMode large-4 medium-4" id="1564515911"> <h2 class="u_1087818251 dmHeaderDefaultH1 dm-title freeHeaderTitle" id="1087818251" data-editor-state="closed" data-uialign="free" style="transition: none 0s ease 0s; display: block;"><div style="text-align: right;"><span style="font-size: 18px; color: rgb(26, 26, 26); font-family: 'Alef Hebrew'; background-color: initial;"><b><span style="font-weight: 700;">Please contact us on +27 83 443 0977</span></b></span></div></h2></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div id="desktopBodyBox"> <div id="iscrollBody"> <div id="site_content"> <div class="dmRespRow dmRespRowStable dmRespRowNoPadding dmPageTitleRow dmInnerBarRow"> <div class="dmRespColsWrapper"> <div class="large-12 dmRespCol"> <div id="innerBar" class="innerBar lineInnerBar dmDisplay_None"> <div class="titleLine display_None"><hr/></div> 
+<!-- Page title is hidden in css for new responsive sites. It is left here only so we don't break old sites. Don't copy it to new layouts --> <div id="pageTitleText"></div> 
+ <div class="titleLine display_None"><hr/></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div dmwrapped="true" id="1554514795" class="dmBody u_dmStyle_template_home dm-home-page" themewaschanged="true"> <div id="allWrapper" class="allWrapper"><!-- navigation placeholders --> <div id="dm_content" class="dmContent"> <div dm:templateorder="117" class="dmFullRowRespTmpl mainBorder dmRespRowsWrapper" id="1734971351"> <div class="u_1655009183 dmRespRow fullBleedChanged fullBleedMode hasBackgroundOverlay dmSectionNoParallax" style="text-align: center;" id="1655009183"> <div class="dmRespColsWrapper" id="1271364842"> <div class="dmRespCol small-12 medium-12 large-12 u_1359776046" id="1359776046"> <div class="u_1948871958 dmNewParagraph" data-element-type="paragraph" id="1948871958" style="transition:none;display:block;line-height:initial;" data-uialign="center" data-version="5"> <h3 class="m-text-align-center text-align-center m-size-20 ql-indent-1 size-35"><span class="m-font-size-20 font-size-35" style="font-family: 'Petit Formal Script'; color: rgb(255, 255, 255); display: initial;">......Keep your eyes on this page</span></h3> 
+</div> <div class="u_1935722857 dmNewParagraph" data-element-type="paragraph" id="1935722857" style="transition: none 0s ease 0s; display: block; text-align: center;" data-uialign="free" data-editor-state="closed" data-version="5"> <h1 class="text-align-center m-size-47 size-60"><span class="m-font-size-47 font-size-60" style="background-color: transparent; color: rgb(255, 255, 255); font-weight: 600; display: initial;">Something great is about to happen</span></h1> 
+</div> <div class="u_1865530672 dmNewParagraph" data-dmtmpl="true" data-element-type="paragraph" id="1865530672" data-uialign="free" style="transition: none 0s ease 0s; display: block; text-align: center;" data-version="5"><p class="text-align-center m-size-18 size-20"><span class="m-font-size-18 font-size-20" style="color: rgb(255, 255, 255); display: initial;">!Sign up and you'll be the first to know</span></p></div> <div class="u_1763374893 dmform default" preserve_css="true" data-element-type="dContactUsRespId" data-captcha-position="bottomleft" id="1763374893" data-layout="layout-3"> <h3 class="dmform-title dmwidget-title" id="1836792420"></h3> 
+ <div class="dmform-wrapper" preserve_css="true" id="1610399356" captcha-lang="en"> <form method="post" class="dmRespDesignRow" locale="ENGLISH" id="1061637014"> <div class="dmforminput required  small-12 dmRespDesignCol medium-12 large-12" id="1815116233"> <label for="dmform-1" id="1031393088" class="" hide="true">Email:</label> 
+<input type="email" class="" name="dmform-1" id="1972383745" placeholder="Email"/><input type="hidden" name="label-dmform-1" value="Email:" id="1349970121" class=""/></div> 
+ <span id="1629189533" class="dmWidgetClear"></span> 
+ <div class="dmformsubmit dmWidget R" preserve_css="true" id="1402103990"><input class="" name="submit" type="submit" value="NOTIFY ME" id="1395591583"/></div> 
+<input name="dmformsendto" type="hidden" value="O0wrseIfFLvVSS+rLVbdr7FJognk8dlbhwtHqIBym3WVu7F+Np59LWBugaxUzXMCb7IzAWfKHUE=" preserve_css="true" id="1366250742" data-dec="true"/><input class="dmActionInput" type="hidden" name="action" value="/_dm/s/rt/widgets/dmform.submit.jsp" id="1696047443"/><input name="dmformsubject" type="hidden" preserve_css="true" id="1306410596" class=""/><input name="dmformfrom" type="hidden" value="" preserve_css="true" id="1051205002"/></form> 
+</div> 
+ <div class="dmform-success" style="" preserve_css="true" id="1736661129"><p class="rteBlock"><span style="color:rgb(181, 243, 146)">Sent!</span></p></div> 
+ <div class="dmform-error" style="display: none;" preserve_css="true" id="1915443268"><p class="rteBlock"><span style="color:rgba(255, 136, 155, 1)">Oops, there was an error sending your message.</span></p><p class="rteBlock"><span style="color:rgba(255, 136, 155, 1)">Please try again later.</span></p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmFooterContainer"> <div id="fcontainer" class="f_hcontainer dmFooter p_hfcontainer"> <div dm:templateorder="14" class="dmFooterResp dmFullFooterResp" id="1602863267"> <div class="dmRespRow dmDividerRow" id="1314492676"> <div class="dmRespColsWrapper" id="1735367830"> <div class="large-12 medium-12 small-12 dmRespCol" id="1209666878"> <div class="dmDividerWrapper clearfix" id="1776315408" data-element-type="dDividerId"><hr class="dmDivider defaultDivider" id="1180913438"/></div> 
+</div> 
+</div> 
+</div> 
+ <section class="u_1458368417 dmRespRow dmHomeSection3" id="1458368417"> <div class="dmRespColsWrapper" id="1705231053"> <div class="dmRespCol small-12 medium-12 large-12" id="1724343094"> <h2 class="u_1067927003 dmHeaderDefaultH1 dm-title freeHeaderTitle" id="1067927003" data-editor-state="closed" data-uialign="center"><div style="text-align: right;"><span style="font-size: 18px; color: rgb(26, 26, 26); font-family: 'Alef Hebrew'; background-color: initial;"><b><span style="font-weight: 700;">Please contact us on +27 83 443 0977</span></b></span></div></h2></div> 
+</div> 
+</section> 
+ <div id="1482260810" dmle_extension="powered_by" data-element-type="powered_by" icon="true" surround="false" data-dmtmpl="true"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+
+            </div>
+        </div>
+<!--  Add full CSS and Javascript before the close tag of the body if needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Google Fonts Include -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900%7CPetit+Formal+Script:100,200,300,400,500,600,700,800,900%7CRoboto:100,200,300,400,500,600,700,800,900%7CJosefin+Sans:100,200,300,400,500,600,700,800,900%7COswald:100,200,300,400,500,600,700,800,900%7CSource+Sans+Pro:100,200,300,400,500,600,700,800,900&amp;subset=latin-ext&amp;display=swap"  as="style" onload="loadCSS(this)" />
+
+
+<link rel="preload" as="style" onload="loadCSS(this)" href="https://static-cdn.multiscreensite.com/mnlt/production/1474/_dm/s/rt/dist/css/css-font-package-v2.min.css" />
+
+
+
+<!-- RT CSS Include d-css-runtime-desktop-one-package-new-->
+<link rel="preload" as="style" onload="loadCSS(this)" href="https://static-cdn.multiscreensite.com/mnlt/production/1474/_dm/s/rt/dist/css/d-css-runtime-desktop-one-package-new.min.css" />
+
+<!-- End of RT CSS Include -->
+
+
+
+    
+       <link rel="preload" href="https://irp-cdn.multiscreensite.com/WIDGET_CSS/production_1474/ac7792ccb55f569758fcc512e2ce9e82.css" id="widgetCSS" as="style" onload="loadCSS(this)" />
+    
+
+
+
+<!-- This is populated in Ajax navigation -->
+<style id="pageAdditionalWidgetsCss" type="text/css">
+</style>
+
+
+
+
+<!-- Site CSS -->
+<link rel="preload" href="https://irp-cdn.multiscreensite.com/76d80873/files/76d80873_1.min.css?v=12" id="siteGlobalCss" as="style" onload="loadCSS(this)" />
+
+
+<style id="customWidgetStyle" type="text/css">
+    
+</style>
+<style id="innerPagesStyle" type="text/css">
+    
+</style>
+
+<style id="additionalGlobalCss" type="text/css">
+</style>
+
+
+<!-- Page CSS -->
+<link rel="preload" href="https://irp-cdn.multiscreensite.com/76d80873/files/76d80873_home_1.min.css?v=12" id="homeCssLink" as="style" onload="loadCSS(this)" />
+
+<style id="pagestyle" type="text/css">
+    
+</style>
+
+<style id="pagestyleDevice" type="text/css">
+    
+</style>
+
+
+
+
+<!--[if IE 7]><style>.fw-head.fw-logo img{max-width: 290px;}.dm_header .logo-div img{max-width: 290px;}</style><![endif]-->
+<!--[if IE 8]><style>.fw-head .fw-logo img{max-width: 290px;}.dm_header .logo-div img{max-width: 290px;}*#dm div.dmHeader{_height:90px;min-height:0px;}</style><![endif]-->
+
+
+
+    <style id="globalFontSizeStyle" type="text/css">.font-size-20, .size-20, .size-20 > font { font-size: 20px !important; }.font-size-35, .size-35, .size-35 > font { font-size: 35px !important; }.font-size-20, .size-20, .size-20 > font { font-size: 20px !important; }.font-size-35, .size-35, .size-35 > font { font-size: 35px !important; }.font-size-47, .size-47, .size-47 > font { font-size: 47px !important; }.font-size-60, .size-60, .size-60 > font { font-size: 60px !important; }.font-size-47, .size-47, .size-47 > font { font-size: 47px !important; }.font-size-60, .size-60, .size-60 > font { font-size: 60px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-20, .size-20, .size-20 > font { font-size: 20px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-20, .size-20, .size-20 > font { font-size: 20px !important; }
+    </style>
+    <style id="pageFontSizeStyle" type="text/css">
+    </style>
+
+
+<!-- Flex Sections CSS -->
+<!-- ========= JS Section ========= -->
+
+<!-- Modernizr -->
+<script>
+    /* THIS FILE IS AUTO-GENERATED. SEE build/build-modernizr */
+
+/*! modernizr 3.5.0 (Custom Build) | MIT *
+ * https://modernizr.com/download/?-passiveeventlisteners-supports-setclasses-cssclassprefix:dm- !*/
+!function(e,n,s){function o(e,n){return typeof e===n}function t(){var e,n,s,t,a,r,l;for(var c in i)if(i.hasOwnProperty(c)){if(e=[],n=i[c],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(s=0;s<n.options.aliases.length;s++)e.push(n.options.aliases[s].toLowerCase());for(t=o(n.fn,"function")?n.fn():n.fn,a=0;a<e.length;a++)r=e[a],l=r.split("."),1===l.length?Modernizr[l[0]]=t:(!Modernizr[l[0]]||Modernizr[l[0]]instanceof Boolean||(Modernizr[l[0]]=new Boolean(Modernizr[l[0]])),Modernizr[l[0]][l[1]]=t),f.push((t?"":"no-")+l.join("-"))}}function a(e){var n=l.className,s=Modernizr._config.classPrefix||"";if(c&&(n=n.baseVal),Modernizr._config.enableJSClass){var o=new RegExp("(^|\\s)"+s+"no-js(\\s|$)");n=n.replace(o,"$1"+s+"js$2")}Modernizr._config.enableClasses&&(n+=" "+s+e.join(" "+s),c?l.className.baseVal=n:l.className=n)}var i=[],r={_version:"3.5.0",_config:{classPrefix:"dm-",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var s=this;setTimeout(function(){n(s[e])},0)},addTest:function(e,n,s){i.push({name:e,fn:n,options:s})},addAsyncTest:function(e){i.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=r,Modernizr=new Modernizr;var f=[],l=n.documentElement,c="svg"===l.nodeName.toLowerCase(),u="CSS"in e&&"supports"in e.CSS,p="supportsCSS"in e;Modernizr.addTest("supports",u||p),Modernizr.addTest("passiveeventlisteners",function(){var n=!1;try{var s=Object.defineProperty({},"passive",{get:function(){n=!0}});e.addEventListener("test",null,s)}catch(o){}return n}),t(),a(f),delete r.addTest,delete r.addAsyncTest;for(var d=0;d<Modernizr._q.length;d++)Modernizr._q[d]();e.Modernizr=Modernizr}(window,document);
+    var isWLR = true;
+
+    window.customWidgetsFunctions = {};
+    window.customWidgetsStrings = {};
+    
+    window.collections = {};
+    </script>
+<script>
+                window.collections = JSON.parse(decodeURIComponent(escape(atob("e30="))));
+</script>
+
+
+
+<script type="text/javascript">
+
+    var version = "5.9.2";
+    var build = "2020-11-01T07_51_49";
+
+    function buildEditorParent() {
+        window.isMultiScreen = true;
+        window.editorParent = {};
+        window.previewParent = {};
+        window.assetsCacheQueryParam = "?version=2020-11-01T07_51_49";
+        try {
+            var _p = window.parent;
+            if (_p && _p.document && _p.$ && _p.$.dmfw) {
+                window.editorParent = _p;
+            }
+            else if (_p.isSitePreview) {
+                window.previewParent = _p;
+            }
+        } catch (e) {
+
+        }
+    }
+
+    buildEditorParent();
+
+
+</script>
+<!-- Load jQuery -->
+<script type="text/javascript" src="https://static-cdn.multiscreensite.com/libs/jquery/2.2.4/jquery.min.js"></script>
+<!-- End Load jQuery --><script>
+    window.cookiesNotificationMarkupPreview = 'null';
+</script>
+<script>
+    var shouldMonitorImages =  false;
+    if(shouldMonitorImages) {
+        window.addEventListener('error', function(event) {
+            if(event.target && event.target.tagName === 'IMG' && event.target.src && event.target.src.includes && event.target.src.includes('multiscreensite.com')) {
+                if (!window.fetch){
+                    return;
+                }
+                try {
+                    return fetch('/_dm/s/rt/actions/log/WARN', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ data: {
+                                type: 'image failed to load',
+                                eventType: event.type,
+                                image: event.target.src,
+                                href: window.location.href
+                            } })
+                    });
+                } catch (error) {
+                    console.log(error);
+                }
+
+            }
+        }, { capture: true });
+    }
+
+</script>
+<!-- HEAD RT JS Include -->
+<script>
+    window.INSITE = window.INSITE || {};
+    window.INSITE.device = "desktop";
+    window.rtCommonProps = {};
+    rtCommonProps["rt.ajax.ajaxScriptsFix"] =true;
+    rtCommonProps["rt.pushnotifs.sslframe.encoded"] = 'aHR0cHM6Ly97c3ViZG9tYWlufS5wdXNoLW5vdGlmcy5jb20=';
+    rtCommonProps["facebook.accessToken"] = '126515034112906|8vv7JhnEegS8qz43fIOZjxGZReA';
+    rtCommonProps["performance.tabletPreview.removeScroll"] = 'false';
+    rtCommonProps["feature.flag.contactUsNewForm"] = 'true';
+    rtCommonProps["inlineEditGrid.snap"] =true;
+    rtCommonProps["popup.insite.cookie.ttl"] = '0.5';
+    rtCommonProps["rt.pushnotifs.force.button"] =true;
+    rtCommonProps["google.places.key"] = 'AIzaSyBAwUOqPUB1CU31yDztoZYaUE7sPv4ktEI';
+    rtCommonProps["common.mapbox.token"] = 'pk.eyJ1IjoiZGFubnliMTIzIiwiYSI6ImNqMGljZ256dzAwMDAycXBkdWxwbDgzeXYifQ.Ck5P-0NKPVKAZ6SH98gxxw';
+    rtCommonProps["common.mapbox.js.override"] =false;
+    rtCommonProps["common.opencage.token"] = '319e14f32bcce967ba55cd263478796d';
+    rtCommonProps["common.here.appId"] = 'iYvDjIQ2quyEu0rg0hLo';
+    rtCommonProps["common.here.appCode"] = '1hcIxLJcbybmtBYTD9Z1UA';
+    rtCommonProps["isCoverage.test"] =false;
+    rtCommonProps["ecommerce.ecwid.script"] = 'https://app.multiscreenstore.com/script.js';
+    rtCommonProps["feature.flag.mappy.kml"] =false;
+    rtCommonProps["common.resources.dist.cdn"]=true;
+    rtCommonProps["common.build.dist.folder"]='production/1474';
+    rtCommonProps["common.resources.cdn.host"]='https://static-cdn.multiscreensite.com';
+    rtCommonProps["common.resources.folder"]='https://static-cdn.multiscreensite.com/mnlt/production/1474';
+    rtCommonProps["import.images.storage.useImageCDN"]=true;
+    rtCommonProps["feature.flag.runtime.photoswipe.fix"]=true;
+    rtCommonProps["feature.flag.runtime.newAnimation.enabled"]=true;
+    rtCommonProps["feature.flag.animations.allowInMobile"]=true;
+    rtCommonProps["feature.flag.videoRefresh.refactor"]=true;
+    
+    rtCommonProps['common.mapsProvider'] = 'mapbox';
+    rtCommonProps['common.mapsProvider.version'] = '0.52.0';
+    rtCommonProps['common.geocodeProvider'] = 'here';
+    rtCommonProps['common.map.defaults.radiusSize'] = '1500';
+    rtCommonProps['common.map.defaults.radiusBg'] = 'rgba(255, 255, 255, 0.4)';
+    rtCommonProps['common.map.defaults.strokeColor'] = 'rgba(255, 255, 255, 1)';
+    rtCommonProps['common.map.defaults.strokeSize'] = '2';
+    rtCommonProps['server.for.resources'] = '';
+    rtCommonProps['feature.flag.lazy.widgets'] = true;
+    rtCommonProps['editor.infra.noPrefixedChanges'] = true;
+    rtCommonProps['feature.flag.single.wow'] = false;
+    rtCommonProps['feature.flag.mark.anchors']= true;
+    rtCommonProps['feature.flag.runtime.miniheader.chromefix'] = false;
+    rtCommonProps['captcha.public.key'] = '6LffcBsUAAAAAMU-MYacU-6QHY4iDtUEYv_Ppwlz';
+    rtCommonProps['captcha.invisible.public.key'] = '6LeiWB8UAAAAAHYnVJM7_-7ap6bXCUNGiv7bBPME';
+    rtCommonProps["images.sizes.small"]=160;
+    rtCommonProps["images.sizes.mobile"]=640;
+    rtCommonProps["images.sizes.tablet"]=1280;
+    rtCommonProps["images.sizes.desktop"]=1920;
+    rtCommonProps["modules.resources.cdn"]=true;
+    rtCommonProps["import.images.storage.imageCDN"]='https://lirp-cdn.multiscreensite.com/';
+    rtCommonProps["facebook.api.version"]='7.0';
+    rtCommonProps["custom.widget.new.runtime.enabled"]=true;
+
+</script>
+<script src="https://static-cdn.multiscreensite.com/mnlt/production/1474/_dm/s/rt/dist/scripts/d-js-runtime-one-package.min.js" ></script>
+<!-- End of HEAD RT JS Include -->
+<script src="https://static-cdn.multiscreensite.com/mnlt/production/1474/_dm/s/rt/dist/scripts/d-js-one-runtime-layouts-package.min.js" ></script>
+<script src="https://static-cdn.multiscreensite.com/mnlt/production/1474/_dm/s/rt/dist/scripts/d-js-one-runtime-layouts-desktop.min.js" ></script>
+<script>jQuery.DM.updateWidthAndHeight();
+$(window).resize(function () {
+    
+});
+$(window).bind("orientationchange", function (e) {
+    $.layoutManager.initLayout();
+    
+});
+$(document).resize(function () {
+    
+});
+</script>
+
+<script type="text/javascript" id="d_track_campaign">
+(function() {
+ 	var campaign = (/utm_campaign=([^&]*)/).exec(window.location.search);
+
+ 	if (campaign && campaign != null && campaign.length > 1) {
+ 		campaign = campaign[1];
+ 		document.cookie = "_dm_rt_campaign=" + campaign + ";expires=" + new Date().getTime() + 24*60*60*1000 + ";domain=" + window.location.hostname + ";path=/";
+ 	}
+}());
+</script>
+<script type="text/javascript" >
+  var _dm_gaq = {};
+  var _gaq = _gaq || [];
+  var _dm_insite = [];
+</script>
+
+  <script type="text/javascript" id="d_track_ga">
+
+  _dm_gaq.siteAlias = '76d80873';
+  _dm_gaq.systemAggregatedGaqID = 'UA-7265702-9';
+  _dm_gaq.externalGaqID = '';
+  
+  _gaq.push(['_gat._forceSSL']);
+  
+  _gaq.push (['_gat._anonymizeIp']);
+  
+
+  if(_dm_gaq.systemAggregatedGaqID && (_dm_gaq.systemAggregatedGaqID != _dm_gaq.systemGaqID)){
+     // track aggregated account
+    _gaq.push(['b._setAccount', _dm_gaq.systemAggregatedGaqID]);
+    _gaq.push(['b._setAllowLinker', true]);
+    _gaq.push(['b._setVar', _dm_gaq.siteAlias]);
+    _gaq.push(['b._setCustomVar', 1, 'product', 'DM_DIRECT',  2 ]);
+    _gaq.push(['b._setCustomVar', 2, 'plan', 'BUSINESS_PLUS',  2 ]);
+    _gaq.push(['b._setCustomVar', 3, 'dfooter', 'false',  2 ]);
+    _gaq.push(['b._setCustomVar', 4, 'sitetype', '1',  2 ]);
+    _gaq.push(['b._setCustomVar', 5, 'pwaEnabled', 'true',  2 ]);
+
+      _gaq.push(['b._trackPageview' ]);
+    pushInsiteImpressions('b._trackEvent');
+   }
+
+   if(_dm_gaq.externalGaqID && _dm_gaq.externalGaqID!= '') {
+     _gaq.push(['c._setAccount', _dm_gaq.externalGaqID]);
+     _gaq.push(['c._setVar', _dm_gaq.siteAlias]);
+     _gaq.push(['c._setDomainName', 'jordaanfamilieboerdery.co.za']);
+     _gaq.push(['c._setAllowLinker', true]);
+     _gaq.push(['c._trackPageview' ]);
+
+     pushInsiteImpressions('c._trackEvent');
+   }
+
+   function pushInsiteImpressions(category) {
+   	$.each(_dm_insite, function(idx, rule) {
+   		_gaq.push([ category, 'insite_impression' , _dm_gaq.siteAlias, rule.ruleType + '__' + rule.ruleId, ]);
+   	});
+   }
+(function() {
+	var ga = document.createElement('script');
+	ga.type = 'text/javascript';
+	ga.async = true;
+  
+	ga.src = 'https://ssl.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(ga, s);
+})();
+
+  </script>
+<script type="text/javascript" id="d_track_sp">
+;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+};p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
+n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","//d32hwlnfiv2gyn.cloudfront.net/sp-2.0.0-dm-0.1.min.js","snowplow"));
+window.dmsnowplow  = window.snowplow;
+
+dmsnowplow('newTracker', 'cf', 'd32hwlnfiv2gyn.cloudfront.net', { // Initialise a tracker
+  appId: '76d80873'
+});
+
+dmsnowplow('trackPageView')
+$.each(_dm_insite, function(idx, rule) {
+	//('trackStructEvent', 'category','action','label','property','value');
+			// Specifically in popup only the client knows if it is shown or not so we don't always want to track its impression here
+	        // the tracking is in popup.js
+			if (rule.actionName !== "popup") {
+                dmsnowplow('trackStructEvent', 'insite', 'impression', rule.ruleType, rule.ruleId);
+            }
+ 			$(document).ready(function(){
+ 				$.DM.events.trigger('event-ruleTriggered', {value: rule})}
+ 			);
+ 		});
+</script>
+   <div style="display:none;" id="P6iryBW0Wu"></div>
+
+<!-- photoswipe markup -->
+
+
+
+
+
+
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div id="fb-root"
+        data-locale="en"></div>
+<!-- Alias: 76d80873 -->
+<div class="dmPopupMask" id="dmPopupMask"></div>
+<div id="dmPopup" class="dmPopup">
+	<div class="dmPopupCloseWrapper"> <div class="dmPopupClose dm-common-icons-close oneIcon" onclick="dmHidePopup(event);"></div> </div>
+ 	<div class="dmPopupTitle"> <span></span> Share by:</div> 
+	<div class="data"></div>
+</div><script id="d_track_personalization">
+// Collects client data and updates cookies used by smart sites
+var expireDays = 365,visitLength = 30 * 60000;
+$.setCookie("dm_timezone_offset", (new Date()).getTimezoneOffset(), expireDays);
+function setSmartSiteCookies() {
+	setSmartSiteCookiesInternal("dm_this_page_view","dm_last_page_view","dm_total_visits","dm_last_visit");
+}
+$.DM.events.on("afterAjax", setSmartSiteCookies);
+setSmartSiteCookies();
+</script>
+<script type="text/javascript">
+    
+    Parameters.NavigationAreaParams.MoreButtonText = 'עוד';
+    
+    Parameters.NavigationAreaParams.LessButtonText = 'פחות';
+    Parameters.HomeLinkText = 'Home';
+    </script>
+
+<script>
+
+    jQuery(window).load(function () {
+        try {
+            jQuery.DM.updateIOSHeight();
+        } catch (e) {
+        }
+        ;
+    });
+</script>
+<script>
+    dmAPI.loadScript(window.rtCommonProps['common.resources.cdn.host'] + '/libs/lozad/1.15.0/lozad.min.js', function () {
+        dmAPI.runOnReady('lozadInit', function () {
+            window.document.querySelectorAll('img.lazy').forEach(function (img) {
+                img.addEventListener('load', function (event) {
+                    var img = event.target;
+                    img.style.filter = 'blur(0)';
+                    setTimeout(function () {
+                        $(img).closest('.imageWidget').addClass('lazyLoaded');
+                    }, 250)
+                });
+            });
+            lozad('.lazy', {
+                threshold: 0.1,
+                loaded: function (element) {
+                    if (element.getAttribute('data-background-image')) {
+                        element.style.setProperty(
+                            'background-image',
+                            "url('" + element.getAttribute('data-background-image') + "')",
+                            "important"
+                        );
+                    }
+                }
+            }).observe();
+        });
+    });
+</script>
+<!--  End Script tags -->
+
+<!--  Site Wide Html Markup -->
+            <!--  Site Wide Html Markup -->
+</body>
+</html>
